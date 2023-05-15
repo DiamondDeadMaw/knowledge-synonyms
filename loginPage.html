@@ -22,46 +22,54 @@
 <body>
 
     <header>
-        <img src="./assets/logo.png">
+      <a href="index.html"> <img src="assets/logo.png" /></a>
     </header>
 
     <div class="container">
-        <div class="row">
+        <div class="row h-100 w-100">
             <div class="col-md-4"></div>
-          <div class="col-md-4" id="container">
-                <div class="green">
+          <div class="col-md-4 h-100 d-flex justify-content-center">
+                 <div class="loginBanner">
+                  <div class="foreground">
+                    <h3>Login</h3> 
+  
+                    <form>
+                     <div class="form-group">
+                       <input type="text" class="form-control" id="username" placeholder="Enter username">
+                     </div>
+                     <div class="form-group">
+  
+                       <input type="password" class="form-control" id="password" placeholder="Enter password">
+                     </div>
+                     <div class="dropdown">
+                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           Role
+                         </button>
+                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                           <a class="dropdown-item" href="#">Role 1</a>
+                           <a class="dropdown-item" href="#">Role 2</a>
+                           <a class="dropdown-item" href="#">Role 3</a>
+                         </div>
+                       </div>
+                       
+                     <button type="submit" class="btn btn-primary login-button" onclick="openHome()">Login</button>
+                     <script>
+                      function openHome() {
+                        window.open("easySimHome.html")
+                      }
+                     </script>
+                   </form>
+                   
+                 </div>
+                  <div class="green">
                     <img class="user" src="./assets/user.png">
                 </div>
                 <div class="white">
                     <a class="account" href="./registerPage.html">Create Account</a>
                     <a class="password" href="./forgotPassword.html">Forgot Password?</a>
                 </div>
-                <div class="foreground">
-                   <h3>Login</h3> 
-
-                   <form>
-                    <div class="form-group">
-                      <input type="text" class="form-control" id="username" placeholder="Enter username">
-                    </div>
-                    <div class="form-group">
-
-                      <input type="password" class="form-control" id="password" placeholder="Enter password">
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Role
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Role 1</a>
-                          <a class="dropdown-item" href="#">Role 2</a>
-                          <a class="dropdown-item" href="#">Role 3</a>
-                        </div>
-                      </div>
-                      
-                    <button type="submit" class="btn btn-primary login-button">Login</button>
-                  </form>
-                  
-                </div>
+                 </div>
+                
           </div>
           <div class="col-md-4"></div>
         </div>

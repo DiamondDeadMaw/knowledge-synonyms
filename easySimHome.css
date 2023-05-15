@@ -1,0 +1,114 @@
+
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color: gray;
+}
+.navbar {
+    border-bottom: 2px solid green;
+    background-color: white !important;
+  }
+
+  #datepicker {
+    width: 100%;
+    border: 0; 
+    border-bottom: 1px solid black; 
+    border-radius: 0;
+    background: transparent;
+  }
+
+  #body-container {
+    background-color: lightgray !important;
+    padding: 0;
+  }
+
+  .box-column {
+    height: 200px;
+    background-color: white;
+    margin: 5px;
+  }
+
+ .header {
+    font-size: 18px;
+    font-weight: 500;
+ }
+
+ .box-right {
+    text-align: end;
+ }
+
+ .carousel-indicators {
+
+    bottom: -30px !important;
+    list-style-type: disc;
+    display: flex;
+    justify-content: center; 
+    padding: 0;
+    margin: 10px 0;
+  }
+  .carousel-indicators li {
+    margin: 0 5px; 
+  }
+
+  .num-simulations {
+    background-color: rgb(66, 199, 66);
+    margin-right: 5px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+
+  .lower-left-box {
+    background-color: rgb(228, 222, 222);
+  }
+
+  .sim-info {
+    padding:10px;   
+    font-family: "Roboto";
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+  }
+
+  .num {
+    font-size: 27px;
+  }
+
+  .white-lower-box {
+    background-color: white;
+  }
+
+  .lower-box-input {
+    width: 100%;
+    border: 1px solid lightgrey;
+    margin: 2px;
+  }
+
+  .form-select ::selection {
+    color:lightgray !important;
+  }
+
+  .right-lower-box {
+    background-color: white;
+    margin-left: 15px;
+    margin-right: 30px;
+  }
+
+ .small-header {
+    font-family: "Roboto";
+    font-weight: 600;
+    margin-top:10px;
+ }
+
+ td {
+    font-family: "Roboto";
+    font-weight: 600;
+ }
+
+ .job-readiness-col {
+    background-image: url("./assets/hand.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    padding: 0;
+ }

@@ -5,14 +5,28 @@ header{
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-#container {
+body {
+  height: 100vh;
+  width: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.loginBanner {
     
     padding-left: 0;
     padding-right: 0;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
-    height: 80vh;
+    height: 70vh;
+    width: 110%;
+    min-width: 400px;
+    max-height: 800px;
+    margin: 0 -30px;
 }
  
 
@@ -21,7 +35,6 @@ header{
     height: 30%;
     width: 100%;
     text-align: center;
-    position: relative;
   }
 
   .white {
@@ -32,26 +45,22 @@ header{
   .user {
     width: 100px;
     height: 100px;
-    position: absolute;
-    top: 20%;
-    left: 40%;
+    margin-top: 30px;
   }
 
 .foreground {
     background-color: white;
     z-index: 5;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
-    height: 45%;
-    width: 20%;
-    top:30%;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);  
     text-align: center;
-
     padding: 30px;
-}
+    margin-top: 170px;
+    width: 15%;
+    min-width: 300px;
+    position: absolute; /* for some reason removing this makes it go on the same layer. because of this i think its taking the body as parent */
+    left: 50%;
+    transform: translateX(-54%);
+  }
 
 .foreground > h3 {
     font-weight: 300;
@@ -80,22 +89,19 @@ header{
   }
 .login-button {
     background-color: green !important;
-    bottom: 10px;
-    position: absolute;
-    bottom: 5%;
-    left: 15%;
     border-radius: 0 !important;
     width: 70%;
+    margin-top: 10px;
 }
 
 .account {
-    position: absolute;
-    bottom: 10%;
+  position: relative; /* without position relative it doesnt move. margin-top doesnt move either */
+  top: 94%;
 }
 .password {
-    position: absolute;
-    bottom: 10%;
-left: 55%;
+    position:relative;
+    top: 94%;
+    right: -45%; /* because of relative, this doesnt work either */
 }
 
 a {

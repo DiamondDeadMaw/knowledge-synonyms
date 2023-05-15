@@ -1,105 +1,71 @@
-header{
-    text-align: center;
-}
-
 * {
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
 }
 
-#container {
-    
-    padding-left: 0;
-    padding-right: 0;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
-    height: 80vh;
-}
- 
-
-  .green {
-    background-color: green;
-    height: 30%;
-    width: 100%;
-    text-align: center;
-    position: relative;
-  }
-
-  .white {
-    background-color: white;
-    height: 70%;
-  }
-  
-  .user {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 20%;
-    left: 40%;
-  }
-
-.foreground {
-    background-color: white;
-    z-index: 5;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
-    height: 45%;
-    width: 20%;
-    top:30%;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    
-    text-align: center;
-
-    padding: 30px;
+body {
+  height: 100vh;
+  overflow-y: hidden;
 }
 
-.foreground > h3 {
-    font-weight: 300;
-    text-align: center;
-
+header {
+  text-align: center !important;
 }
 
-.form-control {
-    border-color: green !important; 
-    border-radius: 0 !important;
-    margin-bottom: 10px;
-  }
-
- 
-  #dropdownMenuButton {
-    background-color: transparent;
-    color: black;
-    border-radius: 0;
-    width: 100%;
-    border-color: green !important; 
-    text-align: left;
-    justify-content: space-between  ;
-    display: flex;
-    flex-direction: row ;
-    color: grey;
-  }
-.login-button {
-    background-color: green !important;
-    bottom: 10px;
-    position: absolute;
-    bottom: 5%;
-    left: 15%;
-    border-radius: 0 !important;
-    width: 70%;
+.container-fluid {
+  height: 100%;
+  overflow-y: hidden;
 }
 
-.account {
-    position: absolute;
-    bottom: 10%;
-}
-.password {
-    position: absolute;
-    bottom: 10%;
-left: 55%;
+.user-interaction {
+  margin-top: 40px;
+
+  height: 70%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  min-width: 370px;
 }
 
-a {
-    color: black !important;
-    text-decoration: none !important;
+.box-green {
+  height: 30%;
+  background-color: green;
+  text-align: center;
+}
+.box-white {
+  height: 70%;
+  background-color: white;
+  position: relative;
+  z-index: -1;
+}
 
+
+.overlay-box {
+  z-index: 10;
+  height: 200%;
+  width: 80%;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.welcome-text {
+  font-family: "Roboto";
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.register-button {
+  border-radius: 0px !important;
+}
+
+.already-member {
+  position: absolute;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 15;
+  text-decoration: none;
+  color: black;
 }
