@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<link rel="stylesheet" href="jquerytest.css">
+
+<script>
+
+
+
+    var collided = false;
+    $(document).ready(function() {
+
+        function collision($div1, $div2) {
+      var x1 = $div1.offset().left;
+      var y1 = $div1.offset().top;
+      var h1 = $div1.outerHeight(true);
+      var w1 = $div1.outerWidth(true);
+      var b1 = y1 + h1;
+      var r1 = x1 + w1;
+      var x2 = $div2.offset().left;
+      var y2 = $div2.offset().top;
+      var h2 = $div2.outerHeight(true);
+      var w2 = $div2.outerWidth(true);
+      var b2 = y2 + h2;
+      var r2 = x2 + w2;
+    console.log(collided);
+      if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
+      collided = true;
+      return true;
+    }        
+      $(".start").click(function() {
+
+        $(".player").show().animate({bottom:"180px"}, 1000);
+        moveObstacle();
+        function moveObstacle() {
+          
+            $(".obstacle").show().animate({left: "0%"}, {duration: 2500, step: function (now, fx) {
+                collision($(".player"), $(".obstacle"));
+            }}).animate({left:"100%"}, 1, () => (!collided) ? moveObstacle() : null)
+        }
+        
+
+        $(this).animate({
+          width: "100%"
+        }, 500, function() {
+          $(this).text('');
+        });
+
+
+      });
+
+      $(document).on("keydown", function (event) {
+        var player = $(".player");
+        var bottom = parseInt(player.css("bottom"));
+        if (event.keyCode == 38 || event.keyCode == 32) {
+            player.animate({height:"30px", width:"30px"}, 50).animate({height:"50px", width:"50px"}, 50)
+            .animate({bottom: "550px"}, 500).animate({bottom: "180px"}, 500)
+        }
+
+
+      });
+
+    });
+  </script>
+
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="player" id="player">
+
+        </div>
+
+        <div class="obstacle"></div>
+        <div class="start">
+            Start
+        </div>
+    </div>
+</body>
+
+</html>
