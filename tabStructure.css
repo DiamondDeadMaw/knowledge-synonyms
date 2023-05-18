@@ -1,0 +1,43 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html,body {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    background-color: white;
+}
+.navbar {
+    border-bottom: 2px solid lightblue;
+    background-color: white !important;
+  }
+
+  .nav-tabs {
+    background-color: black;
+  }
+
+  .menu-tab-background {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    margin: 1px;
+    text-align: center;
+  }
+
+  .menu-tab-background:hover {
+    background-color: white;
+  }
+
+  svg {filter: invert(99%) sepia(6%) saturate(244%) hue-rotate(245deg) brightness(115%) contrast(100%);
+    
+    
+  }
+  svg:hover {
+    filter: invert(0%) sepia(0%) saturate(18%) hue-rotate(293deg) brightness(102%) contrast(105%) ;
+  }
+
+
