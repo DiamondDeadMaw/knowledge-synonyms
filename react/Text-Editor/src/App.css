@@ -1,0 +1,104 @@
+*{
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 0px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.nav-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-right: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.image-button {
+  background-color: black;
+  border: none;
+  padding: 0;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.image-button img {
+  width: 24px;
+  height: 24px;
+}
+
+
+
+.main-content {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+
+  background-color: white;
+}
+.container-dark {
+  width: 100%;
+  height: 100%;
+
+  background-color: rgb(33, 32, 32);
+}
+.btn {
+  margin-left: 1px;
+  margin-right: 1px;
+  border-radius: 0px;
+  margin-bottom: 5px;
+  background-color: rgb(127, 127, 240);
+}
+
+.btn-dark {
+  margin-left: 1px;
+  margin-right: 1px;
+  border-radius: 0px;
+  margin-bottom: 5px;
+  background-color: grey;
+  color: white;
+}
+
+.head {
+  color: black;
+}
+
+.head-dark {
+  color: white;
+}
+
+img {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(38deg) brightness(96%) contrast(111%);
+}
