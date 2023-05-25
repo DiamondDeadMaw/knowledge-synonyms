@@ -4,6 +4,8 @@ import { useSpeechSynthesis } from "react-speech-kit";
 import moon from "./assets/moon.png"
 import './App.css'
 
+import Calculator from "./calc.jsx"
+
 
 
 
@@ -121,6 +123,7 @@ function App() {
     <div className={darkMode ? "container-dark" : "container"}>
       <Navbar toggleMode={toggleMode}/>
       <MainContent dMode={darkMode}/>
+      <Calculator dMode={darkMode} />
     </div>
   );
 }
