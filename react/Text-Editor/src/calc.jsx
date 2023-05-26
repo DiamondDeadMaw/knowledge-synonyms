@@ -2,6 +2,15 @@ import { useState } from "react";
 import "./App.css";
 
 
+function CalcButton({changeText,text, val}) {
+  
+  return (
+    <div className="calc-button" onClick={() => {changeText(text+val)}}>
+      {val}
+    </div>
+  )
+}
+
 function Calculator({dMode}) {
   const [text, setText] = useState("");
 
@@ -13,19 +22,52 @@ function Calculator({dMode}) {
     setAns(evaluate(toPrefix(text)));
   }
 
-  const [ans, setAns] = useState('Type an expression without spaces');
+  const [ans, setAns] = useState('');
 
   return (
-    <div>
       <div className="calc">
         <h2 className={dMode ? "head-dark" : "head"}>Calculator</h2>
-        <input type="text" value={text} onChange={hChange} />
-        <h1 id="eq">=</h1>
-        <p>{ans}</p>
+        <div className="upper">
+        <textarea rows={4} cols={18} value={text} onChange={hChange} className="calc-display"></textarea>
+        </div>
+        <div className="lower">
+        <div className="row">
+          <CalcButton changeText={setText} text={text} val={'7'}/>
+          <CalcButton changeText={setText} text={text} val={'8'}/>
+          <CalcButton changeText={setText} text={text} val={'9'}/>
+          <div className="calc-button" onClick={() => {setText("")}}>C</div>
+        </div>
+
+        <div className="row">
+        <CalcButton changeText={setText} text={text} val={'4'}/>
+        <CalcButton changeText={setText} text={text} val={'5'}/>
+        <CalcButton changeText={setText} text={text} val={'6'}/>
+        <CalcButton changeText={setText} text={text} val={'*'}/>
+        </div>
+
+        <div className="row">
+        <CalcButton changeText={setText} text={text} val={'1'}/>
+        <CalcButton changeText={setText} text={text} val={'2'}/>
+        <CalcButton changeText={setText} text={text} val={'3'}/>
+        <CalcButton changeText={setText} text={text} val={'-'}/>
+        </div>
+        
+        <div className="row">
+        <CalcButton changeText={setText} text={text} val={'0'}/>
+        <CalcButton changeText={setText} text={text} val={'/'}/>
+        <CalcButton changeText={setText} text={text} val={'+'}/>
+        <CalcButton changeText={setText} text={text} val={'^'}/>
+        </div>
+
+        <div className="row">
+        <CalcButton changeText={setText} text={text} val={'('}/>
+        <CalcButton changeText={setText} text={text} val={')'}/>
+        <div className="calc-button" onClick={() => {setText(evaluate(toPrefix(text)))}}>=</div>
+        <div className="empty-button"></div>
+        </div>
+        </div>
       </div>
 
-      <button className="calcBtn" onClick={toCalc}>Calculate</button>
-    </div>
   );
 }
 
