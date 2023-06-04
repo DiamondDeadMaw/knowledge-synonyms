@@ -1,0 +1,109 @@
+.navbar__right {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar__right li {
+    margin-left: 25px;
+
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  }
+
+  .navbar__logo {
+    width: 100px;
+    height: 40px;
+  }
+
+  .navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./assets/Banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .left {
+    display: flex;
+    align-items: start;
+    padding-left: 20px;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+  }
+
+  .overlay-bubbles {
+    width: 100%;
+  }
+  .image-overlay {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-top: 125px;
+    
+    animation-name: moveBubbles;
+    animation-iteration-count: 1;
+    animation-duration: 4s;
+text-align: center;
+  }
+  .container::after {
+    content: "Transform your Knowledge, \00000a PPT, PDF, Video into \00000a Digital Learning (SVASU Scorm)";
+    color: white;
+    position: absolute;
+    top: 280px;
+  white-space: pre;
+  font-weight: bold;
+  text-align: right;
+  font-size: 50px;
+  left: 50%;
+    transform: translateX(-50%);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 3s ease-in-out forwards;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes moveBubbles {
+    from {margin-top: 15%;}
+    to {margin-top: 0%;}
+  }
+ 
+  #bubbles {
+    z-index: 2;
+    background-image: url("./assets/Banner-Circle.png");
+    height: 724px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  #bubbles-bottom {
+   z-index: 3;
+   background-image: url("./assets/Banner-Bot.png");
+    height: 323px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 194px;
+  }
