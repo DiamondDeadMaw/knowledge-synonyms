@@ -293,6 +293,8 @@ function Fourth() {
     return (
         <div className="fourth-container">
             <p className="fourth-title">Instantly Convert <br></br> Your PowerPoint/PDF/ <br></br> Video Training <br></br> to Interactive Course</p>
+            
+            <div className="fourth-inner-container">
             <SlamOut text={"Add Branding"}/>
             <SlamOut text={"Add Image"}/>
             <SlamOut text={"Add Audio"}/>
@@ -300,6 +302,7 @@ function Fourth() {
             <SlamOut text={"Add Assessment"}/>
             <SlamOut text={"Add Interactive Templates"}/>
             <SlamOut text={"SVASU Scorm Package"}/>
+            </div>
 
             <p className="fourth-title">3 Simple Work Flows</p>
             <Workflow title={"Svasu Scorm Work Flow 1"} subtitle={"Create Using Our Existing Templates"} image={img1}></Workflow>

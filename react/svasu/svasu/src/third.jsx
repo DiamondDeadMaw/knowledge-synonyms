@@ -46,6 +46,12 @@ function isElementInViewportCenter(element) {
 
   
 function BlackBorderText({text}) {
+  const [matches, setMatches] = useState(window.matchMedia("(min-width: 880px)").matches);
+
+  useEffect(() => {
+    window.matchMedia("(min-width: 880px)").addEventListener("change", e=> setMatches(e.matches)); 
+  }, []);
+
     const elementRef = useRef(null);
     const [isCentered, setIsCentered] = useState(false);
 
@@ -63,17 +69,25 @@ function BlackBorderText({text}) {
         };
       }, []);
 
+    
     return (
-        <div className={isCentered ? "black-border" : "white-border"} ref={elementRef}>
-            <p className={isCentered ? "black-text" : "white-text"}>{text}</p>
-        </div>
+      <div className={isCentered ? "black-border" : "white-border"} ref={elementRef}>
+      {matches && (<p className={isCentered ? "black-text" : "white-text"}>{text}</p>)}
+      {!matches && (<p className={isCentered ? "black-text-sm" : "white-text-sm"}>{text}</p>)}
+  </div>
     );
 } 
 
 function Third() {
+  const [matches, setMatches] = useState(window.matchMedia("(min-width: 440px)").matches);
+
+  useEffect(() => {
+    window.matchMedia("(min-width: 440px)").addEventListener("change", e=> setMatches(e.matches)); 
+  }, []);
+
     return (
         <div className="third-container">
-        <p className="title">Who all can benefit <br></br> from <img className="inline-image" src={logo}></img> Scorm</p>
+        <p className={!matches ? "title-sm" : "title"}>Who all can benefit <br></br> from <img className={!matches ? "inline-image-sm" : "inline-image"} src={logo}></img> Scorm</p>
         <SlamIn text={"SVASU For Individuals"} max={2000} min={1600} />
         <BlackBorderText text={"Self create your truly responsive, interactive, media rich content."} />
         <BlackBorderText text={"Convert pdf to scorm convert ppt to scorm convert scorm to pdf convert video to scorm with best elearning authoring tools"}/>

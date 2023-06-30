@@ -1,15 +1,22 @@
 .fourth-container {
-    width: 100%;
+    width: 100vh;
     text-align: center;
-
 }
 
+.fourth-inner-container {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
 .fourth-title {
     color: black;
     font-size: 80px;
     font-weight: 700;
     margin-top: 210px;
     margin-bottom: 400px;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
 }
 
 
@@ -17,12 +24,18 @@
 .slamout-container {
     padding-bottom: 800px;
     position: inherit;
+
+    width: 100vh;
+    text-align: center;
+
 }  
 
 .slamout-container-visible {
     padding-bottom: 800px;
     position: sticky;
     top: 50%;
+    width: 400vh;
+    text-align: center;
 }
 
 .slamout-text {
@@ -30,6 +43,8 @@
     opacity: 0;
     transform: scale(0);
     color: black;
+    width: 100vh;
+    left: 50%;
 }
 .workflow-container {
     text-align: center;
